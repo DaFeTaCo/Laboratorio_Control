@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Practica.aux
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+The style file: ieeetr.bst
+Reallocating 'name_of_file' (item size: 1) to 20 items.
+Database file #1: bibliografia-Pract1.bib
+Warning--entry type for "mountsinai2023" isn't style-file defined
+--line 19 of file bibliografia-Pract1.bib
+Warning--entry type for "resmed2025restrictive" isn't style-file defined
+--line 71 of file bibliografia-Pract1.bib
+Warning--entry type for "academialab2025nyquist" isn't style-file defined
+--line 87 of file bibliografia-Pract1.bib
+You've used 6 entries,
+            1876 wiz_defined-function locations,
+            508 strings with 4246 characters,
+and the built_in function-call counts, 986 in all, are:
+= -- 102
+> -- 28
+< -- 0
++ -- 13
+- -- 7
+* -- 46
+:= -- 152
+add.period$ -- 11
+call.type$ -- 6
+change.case$ -- 5
+chr.to.int$ -- 0
+cite$ -- 6
+duplicate$ -- 43
+empty$ -- 113
+format.name$ -- 7
+if$ -- 243
+int.to.chr$ -- 0
+int.to.str$ -- 6
+missing$ -- 3
+newline$ -- 26
+num.names$ -- 6
+pop$ -- 31
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 23
+stack$ -- 0
+substring$ -- 24
+swap$ -- 9
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 9
+width$ -- 7
+write$ -- 59
+(There were 3 warnings)
