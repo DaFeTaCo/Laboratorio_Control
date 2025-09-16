@@ -1,4 +1,4 @@
-% Laboratorio de control, UDEA, Bioingeniería, 2025-2
+%Laboratorio de control, UDEA, Bioingeniería, 2025-2
 
 \documentclass[journal]{IEEEtran} 
 
@@ -100,14 +100,13 @@ Su relevancia fisiológica radica en que determina la facilidad con que los pulm
     \item \textbf{NumPy}: proporciona estructuras de datos eficientes (como arreglos multidimensionales) y operaciones matemáticas de alto rendimiento. Es la base para el cálculo matricial y vectorial necesario en simulaciones.
     
     \item \textbf{Matplotlib}: se emplea para graficar resultados, como respuestas temporales, diagramas de Bode o espectros de señales. Permite visualizar claramente el comportamiento del sistema simulado.
+
 \end{itemize}
 
 
 \section{Resultados y discusión}
 
-\subsection{Mécanica respiratoria}
-
-\paragraph{Función de transferencia en el dominio continuo (S)}
+\subsection{Función de transferencia en el dominio continuo (S)}
 La función obtenida para la mecánica respiratoria se evidencia en la ecuación \ref{eq:transferencia}
 
 \begin{equation}
@@ -121,9 +120,9 @@ La función obtenida para la mecánica respiratoria se evidencia en la ecuación
 
 El volumen se obtuvo al integrar la función de flujo, ya que el flujo es la derivada del volumen con respecto al tiempo. Esto equivale a multiplicar la función de flujo por 1/s en el dominio de Laplace.\bigskip
 
-\paragraph{Simulación del modelo respiratorio en condiciones normales y patológicas}
+\subsection{Simulación del modelo respiratorio en condiciones normales y patológicas}
 
-En primer lugar, se simuló el sistema respiratorio en condiciones normales como se evidencia en la figura \ref{fig:simulacion_normal}, en esta se muestran los resultados de simulación obtenidos para el flujo de aire Q(t), y del volumen V(t) en respuesta a una presión de entrada Pao(t) (excitación sinusoidal) con una amplitud de 2,5 cm de H$_2$O a 15 respiraciones por minuto, lo cual corresponde a la frecuencia normal de respiración en reposo \cite{khoo2000physiological}. Como se puede observar en esta figura, la onda correspondiente al volumen se encuentra más en fase con Pao, mientras que el flujo de aire muestra un adelanto de fase con Pao. Adicionalmente, se puede evidenciar que el valor máximo alcanzado por la onda de flujo es de ~0,5, mientras que para el volumen es de ~0,4.
+En primer lugar, se simuló el sistema respiratorio en condiciones normales como se evidencia en la figura \ref{fig:simulacion_normal}, en la cual muestran los resultados de simulación obtenidos para el flujo de aire Q(t), y del volumen V(t) en respuesta a una presión de entrada Pao(t) (excitación sinusoidal) con una amplitud de 2,5 cm de H$_2$O a 15 respiraciones por minuto, lo cual corresponde a la frecuencia normal de respiración en reposo \cite{khoo2000physiological}. Como se puede observar, la onda correspondiente al volumen se encuentra más en fase con Pao, mientras que el flujo de aire muestra un adelanto de fase con Pao. Adicionalmente, se evidencia que el valor máximo alcanzado por la onda de flujo es de ~0,5, mientras que para el volumen es de ~0,4.
 
 \begin{figure}[h!]
     \centering
@@ -166,10 +165,10 @@ La restricción torácica forma parte del grupo de enfermedades pulmonares restr
 
 Por tal motivo, hay una reducción de la distensibilidad torácica, lo que provoca un menor volumen inspirado. Esto se representó en la simulación variando el término correspondiente a la compliancia de la pared pectoral (Cw), disminuyendolo a 0.03 \cite{nguyen2010respiratory}.
 
-En la figura \ref{fig:comparacion}, vemos como este valor afecta las curvas tanto del flujo como del volumen disminuyendo su pendiente de manera mucho más significativa que las otras dos enfermedades propuestas anteriormente, demostrando que la mecánica depende más de los efectos de la compliancia. Esta disminución en las amplitudes, nos indica que el volumen inspirado es menor y el flujo es reducido debido a la rigidez de la caja torácica, cumpliendo con lo que se espera de esta enfermedad. \bigskip
+En la figura \ref{fig:comparacion}, vemos como este valor afecta las curvas tanto del flujo como del volumen disminuyendo su pendiente de manera mucho más significativa que las otras dos enfermedades propuestas anteriormente lo que sugiere que la mecánica respiratoria depende más de los efectos de la compliancia.. Esta disminución en las amplitudes indica que el volumen inspirado es menor y el flujo es reducido debido a la rigidez de la caja torácica, cumpliendo con lo esperado en esta enfermedad. \bigskip
 
 
-\paragraph{Conversión de la función de transferencia al dominio discreto (Z)}
+\subsection{Conversión de la función de transferencia al dominio discreto (Z)}
 
 Para la selección del tiempo de muestreo ($T_s$), se consideró la frecuencia de 15 respiraciones por minuto utilizada en la función de transferencia, lo cual equivale a una frecuencia de 0,25 Hz ($f$) o $\pi/2$ rad/s, como se muestra en la ecuación \ref{eq:freq}.
 
@@ -182,36 +181,65 @@ Este valor es relevante para la aplicación del teorema de Nyquist, el cual esta
 
 De acuerdo con este principio, la frecuencia mínima de muestreo requerida para la correcta reconstrucción de la señal sería de 0,5 Hz. Sin embargo, en la práctica se recomienda emplear valores significativamente superiores, con el fin de capturar variaciones más sutiles y reducir posibles errores de reconstrucción. Por esta razón, en lugar de utilizar el doble de la frecuencia máxima, se decidió trabajar con un factor de 40 veces, obteniendo así una frecuencia de muestreo de 10 Hz, lo que corresponde a un período de muestreo de 0,1 s.
 
-\subsection{Análisis del sistema continuo vs. sistemas discretos}
+La discretización se realizó mediante dos métodos distintos para su posterior comparación:
 
-\paragraph{Función de transferencia en el dominio discreto}
+\begin{itemize}
+    \item \textbf{Zero-Order Hold (ZOH):} Este método asume que la señal de entrada se mantiene constante durante cada intervalo de muestreo.
+    \item \textbf{Tustin (transformada bilineal):} Este método utiliza una aproximación trapezoidal para integrar la señal.
+\end{itemize}
 
-
-
-\paragraph{Respuesta del sistema discreto ante diferentes entradas}
-
+Las gráficas comparativas de las respuestas de los sistemas se muestran en la figura \ref{fig:simulacion_P4}. 
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=1\linewidth]{Comparacion_P4.png}
-    \caption{Comparacion entre las respuestas del sistema continuo vs sistema discreto en respuesta a una excitación sinusoidal.}
+    \caption{Comparacion entre las respuestas del sistema continuo vs sistemas discretos (ZOH y Tustin) en respuesta a una excitación sinusoidal.}
     \label{fig:simulacion_P4}
 \end{figure}
 
-\paragraph{Respuesta del sistema original continuo ante diferentes entradas}
+La respuesta ZOH se desfasa de la respuesta del sistema continuo porque el método de retención de orden cero mantiene el valor de la señal constante entre las muestras. Esto crea un efecto escalonado, como una serie de bloques, que introduce un retraso o desfase en la respuesta. Este retraso adicional tiene un impacto significativo en la estabilidad y el rendimiento del sistema en lazo cerrado, lo que se manifiesta como picos más altos en la respuesta transitoria.
+Mientras que la respuesta Tustin ofrece una mejor representación del sistema continuo ya que en lugar de mantener el valor constante, el método asume que la señal cambia linealmente entre las muestras.
+
+
+
+
+\subsection{Análisis de la respuesta de sistemas discretos y continuos ante diferentes entradas}
+
+Se obtuvo la función de transferencia equivalente en el dominio discreto (Z) a partir de la función de transferencia continua G(s) (ecuación \ref{eq:F_transferencia}). 
+
+\begin{equation}
+    G(s) = \frac{1}{s^2 + 3s + 2}
+    \label{eq:F_transferencia}
+\end{equation}
+
+
+Una vez obtenida la función de transferencia discreta, se procedió a simular las respuestas para cada sistema, tanto en lazo abierto como en lazo cerrado. Se utilizaron una entrada de escalón unitario y una entrada de impulso unitario.
 
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=1\linewidth]{Comparacion_P5.png}
-    \caption{Comparacion entre las respuestas del sistema 2 en su forma continua vs sistema discreto variando el periodo de muestreo.}
+    \caption{Comparacion entre las respuestas de un segundo sistema en su forma continua vs sistema discreto variando el periodo de muestreo.}
     \label{fig:simulacion_P5}
 \end{figure}
 
 
+En la figura \ref{fig:simulacion_P5}, Se comparan las respuestas de cada sistema discreto con las del sistema continuo original, lo que permite observar cómo a mayor tiempo de muestreo, la respuesta discreta puede divergir más de la respuesta del sistema continuo.
+El retraso de muestreo es una consecuencia directa del proceso de digitalización. Al muestrear la señal cada ($T_s$) segundos y mantener el valor constante (método ZOH), el sistema discreto siempre va un paso atrás. A medida que el tiempo de muestreo aumenta, el sistema discreto pierde información entre las muestras, lo que provoca una degradación en la respuesta del sistema, manifestada en oscilaciones, mayor sobreimpulso y una divergencia notable de la respuesta respecto al sistema continuo.
+
+
+En ambos casos (lazo abierto y cerrado), un ($T_s$) grande compromete la capacidad del sistema discreto para simular con precisión el comportamiento del sistema original.
+Además, Las respuestas en lazo cerrado (LC) suelen tener menor amplitud que las de lazo abierto (LA) porque la retroalimentación reduce la ganancia del sistema. 
+
+
 \section{Conclusiones}
 
-% References
+La precisión de la discretización depende fundamentalmente del tiempo de muestreo ($T_s$). Para obtener una representación fiel del sistema continuo en el dominio discreto, es esencial utilizar un tiempo de muestreo lo suficientemente pequeño.
+
+Para el modelo empleado, la obstrucción central y periférica tienen efectos equivalentes, lo que implicaría que la respuesta de la vía respiratoria central es similar a la de la vía respiratoria periférica. Sin embargo, esto hace parte de las simplificaciones que se asumen dentro del modelo.
+
+Los cambios en los distintos parámetros de modelado pueden ayudar a comprender mejor el comportamiento e implicaciones de los cambios en la resistencia y compliancia para diferentes patologías.
+
 
 \bibliographystyle{ieeetr}   % estilo de bibliografía 
 \bibliography{bibliografia-Pract1}  % nombre del archivo .bib SIN la extensión
