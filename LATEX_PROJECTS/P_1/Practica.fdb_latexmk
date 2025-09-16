@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex Practica"] 1757989469.93524 "Practica.aux" "Practica.bbl" "Practica" 1757989472.52546 0
-  "./bibliografia-Pract1.bib" 1757966936 1899 685b1981ac8c99735526b320bde27683 ""
+["bibtex Practica"] 1758059642.06963 "Practica.aux" "Practica.bbl" "Practica" 1758061923.63384 0
+  "./bibliografia-Pract1.bib" 1758055628 2196 c56c91d77aa7c98390352633c74d3e93 ""
   "E:/SSOFTWARE/MiKTeX/bibtex/bst/bibtex/ieeetr.bst" 1291864344 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
-  "Practica.aux" 1757989471 3585 9371fb03418f5c854bd1a24779e07879 "pdflatex"
+  "Practica.aux" 1758061922 4966 403b8fae600961651504bfc617e164fc "pdflatex"
   (generated)
   "Practica.bbl"
   "Practica.blg"
   (rewritten before read)
-["pdflatex"] 1757989470.36749 "e:/ACTUAL/ACTUAL/CONTROL/Laboratorio_Control/LATEX_PROJECTS/P_1/Practica.tex" "Practica.pdf" "Practica" 1757989472.52627 0
+["pdflatex"] 1758061921.35851 "e:/ACTUAL/ACTUAL/CONTROL/Laboratorio_Control/LATEX_PROJECTS/P_1/Practica.tex" "Practica.pdf" "Practica" 1758061923.6347 0
   "C:/Users/tamay/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1757966943 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/tamay/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1757472028 13245317 0857c909c8835202c329e722db6e9131 ""
   "Comparacion_P4.png" 1757970906 93873 78f494217beb665f6f206effbd9db6f8 ""
@@ -18,6 +18,7 @@
   "E:/SSOFTWARE/MiKTeX/fonts/tfm/adobe/times/ptmb7t.tfm" 1136790254 2172 fd0c924230362ff848a33632ed45dc23 ""
   "E:/SSOFTWARE/MiKTeX/fonts/tfm/adobe/times/ptmb8r.tfm" 1136790254 4524 6bce29db5bc272ba5f332261583fee9c ""
   "E:/SSOFTWARE/MiKTeX/fonts/tfm/adobe/times/ptmbi7t.tfm" 1136790254 2228 e564491c42a4540b5ebb710a75ff306c ""
+  "E:/SSOFTWARE/MiKTeX/fonts/tfm/adobe/times/ptmbi8r.tfm" 1136790254 4480 10409ed8bab5aea9ec9a78028b763919 ""
   "E:/SSOFTWARE/MiKTeX/fonts/tfm/adobe/times/ptmr7t.tfm" 1136790254 2124 2601a75482e9426d33db523edf23570a ""
   "E:/SSOFTWARE/MiKTeX/fonts/tfm/adobe/times/ptmr8c.tfm" 1136790254 1352 fa28a7e6d323c65ce7d13d5342ff6be2 ""
   "E:/SSOFTWARE/MiKTeX/fonts/tfm/adobe/times/ptmr8r.tfm" 1136790254 4408 25b74d011a4c66b7f212c0cc3c90061b ""
@@ -47,9 +48,11 @@
   "E:/SSOFTWARE/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1247596666 32716 08e384dc442464e7285e891af9f45947 ""
   "E:/SSOFTWARE/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb" 1247596670 30457 bc0868ebece724ed7c3d37e3d9bff7bd ""
   "E:/SSOFTWARE/MiKTeX/fonts/type1/urw/times/utmb8a.pfb" 1136871348 44729 fea0975e20ec51c992338362f05f1146 ""
+  "E:/SSOFTWARE/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb" 1136871348 44656 0cbca70e0534538582128f6b54593cca ""
   "E:/SSOFTWARE/MiKTeX/fonts/type1/urw/times/utmr8a.pfb" 1136871348 46026 687528a208fbfc1f00832bb96cccebbb ""
   "E:/SSOFTWARE/MiKTeX/fonts/type1/urw/times/utmri8a.pfb" 1136871348 45458 504e2b06fa82109d168c7a0afb09e145 ""
   "E:/SSOFTWARE/MiKTeX/fonts/vf/adobe/times/ptmb7t.vf" 1136790254 1372 788387fea833ef5963f4c5bffe33eb89 ""
+  "E:/SSOFTWARE/MiKTeX/fonts/vf/adobe/times/ptmbi7t.vf" 1136790254 1384 6ac0f8b839230f5d9389287365b243c0 ""
   "E:/SSOFTWARE/MiKTeX/fonts/vf/adobe/times/ptmr7t.vf" 1136790254 1380 0ea3a3370054be6da6acd929ec569f06 ""
   "E:/SSOFTWARE/MiKTeX/fonts/vf/adobe/times/ptmr8c.vf" 1136790254 3556 8a9a6dcbcd146ef985683f677f4758a6 ""
   "E:/SSOFTWARE/MiKTeX/fonts/vf/adobe/times/ptmrc7t.vf" 1136790254 1948 7330aeef3af211edff3b35fb2c12a0fd ""
@@ -75,10 +78,10 @@
   "E:/SSOFTWARE/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1751005717 30351 a2b09edc6c93a742566b222c33d0278e ""
   "E:/SSOFTWARE/MiKTeX/tex/latex/psnfss/ot1ptm.fd" 1585253778 1007 15056f4a61917ceed3a44e4ac11fcc52 ""
   "E:/SSOFTWARE/MiKTeX/tex/latex/psnfss/ts1ptm.fd" 1585253778 653 96f56dc5d1ef1fe1121f1cfeec70ee0c ""
-  "Practica.aux" 1757989471 3585 9371fb03418f5c854bd1a24779e07879 "pdflatex"
-  "Practica.bbl" 1757989470 1101 7e46215396ba342a04ee6af6c60ff925 "bibtex Practica"
-  "Practica.tex" 1757989466 18250 11582da8a3af3058fac90dbed82b9b95 ""
-  "e:/ACTUAL/ACTUAL/CONTROL/Laboratorio_Control/LATEX_PROJECTS/P_1/Practica.tex" 1757989466 18250 11582da8a3af3058fac90dbed82b9b95 ""
+  "Practica.aux" 1758061922 4966 403b8fae600961651504bfc617e164fc "pdflatex"
+  "Practica.bbl" 1758059642 1248 6a183a43180c813c4a677eb54117602b "bibtex Practica"
+  "Practica.tex" 1758061920 19370 8fbdfbe7a7cc91a462282de410d77382 ""
+  "e:/ACTUAL/ACTUAL/CONTROL/Laboratorio_Control/LATEX_PROJECTS/P_1/Practica.tex" 1758061920 19370 8fbdfbe7a7cc91a462282de410d77382 ""
   (generated)
   "Practica.aux"
   "Practica.log"

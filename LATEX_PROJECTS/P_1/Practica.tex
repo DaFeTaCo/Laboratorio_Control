@@ -106,7 +106,8 @@ Su relevancia fisiológica radica en que determina la facilidad con que los pulm
 
 \section{Resultados y discusión}
 
-\subsection{Función de transferencia en el dominio continuo (S)}
+\subsection{\textbf{Mecánica respiratoria}}
+\paragraph{\textbf{Función de transferencia en el dominio continuo (S)}}
 La función obtenida para la mecánica respiratoria se evidencia en la ecuación \ref{eq:transferencia}
 
 \begin{equation}
@@ -120,7 +121,7 @@ La función obtenida para la mecánica respiratoria se evidencia en la ecuación
 
 El volumen se obtuvo al integrar la función de flujo, ya que el flujo es la derivada del volumen con respecto al tiempo. Esto equivale a multiplicar la función de flujo por 1/s en el dominio de Laplace.\bigskip
 
-\subsection{Simulación del modelo respiratorio en condiciones normales y patológicas}
+\paragraph{\textbf{Simulación del modelo respiratorio en condiciones normales y patológicas}}
 
 En primer lugar, se simuló el sistema respiratorio en condiciones normales como se evidencia en la figura \ref{fig:simulacion_normal}, en la cual muestran los resultados de simulación obtenidos para el flujo de aire Q(t), y del volumen V(t) en respuesta a una presión de entrada Pao(t) (excitación sinusoidal) con una amplitud de 2,5 cm de H$_2$O a 15 respiraciones por minuto, lo cual corresponde a la frecuencia normal de respiración en reposo \cite{khoo2000physiological}. Como se puede observar, la onda correspondiente al volumen se encuentra más en fase con Pao, mientras que el flujo de aire muestra un adelanto de fase con Pao. Adicionalmente, se evidencia que el valor máximo alcanzado por la onda de flujo es de ~0,5, mientras que para el volumen es de ~0,4.
 
@@ -168,7 +169,7 @@ Por tal motivo, hay una reducción de la distensibilidad torácica, lo que provo
 En la figura \ref{fig:comparacion}, vemos como este valor afecta las curvas tanto del flujo como del volumen disminuyendo su pendiente de manera mucho más significativa que las otras dos enfermedades propuestas anteriormente lo que sugiere que la mecánica respiratoria depende más de los efectos de la compliancia.. Esta disminución en las amplitudes indica que el volumen inspirado es menor y el flujo es reducido debido a la rigidez de la caja torácica, cumpliendo con lo esperado en esta enfermedad. \bigskip
 
 
-\subsection{Conversión de la función de transferencia al dominio discreto (Z)}
+\paragraph{\textbf{Conversión de la función de transferencia al dominio discreto (Z)}}
 
 Para la selección del tiempo de muestreo ($T_s$), se consideró la frecuencia de 15 respiraciones por minuto utilizada en la función de transferencia, lo cual equivale a una frecuencia de 0,25 Hz ($f$) o $\pi/2$ rad/s, como se muestra en la ecuación \ref{eq:freq}.
 
@@ -184,8 +185,8 @@ De acuerdo con este principio, la frecuencia mínima de muestreo requerida para 
 La discretización se realizó mediante dos métodos distintos para su posterior comparación:
 
 \begin{itemize}
-    \item \textbf{Zero-Order Hold (ZOH):} Este método asume que la señal de entrada se mantiene constante durante cada intervalo de muestreo.
-    \item \textbf{Tustin (transformada bilineal):} Este método utiliza una aproximación trapezoidal para integrar la señal.
+    \item \textbf{Zero-Order Hold (ZOH):} Este método asume que la señal de entrada se mantiene constante durante cada intervalo de muestreo \cite{mathworks_continuous_discrete_nodate}.
+    \item \textbf{Tustin (transformada bilineal):} Este método utiliza una aproximación trapezoidal para integrar la señal \cite{mathworks_continuous_discrete_nodate}.
 \end{itemize}
 
 Las gráficas comparativas de las respuestas de los sistemas se muestran en la figura \ref{fig:simulacion_P4}. 
@@ -201,11 +202,9 @@ La respuesta ZOH se desfasa de la respuesta del sistema continuo porque el méto
 Mientras que la respuesta Tustin ofrece una mejor representación del sistema continuo ya que en lugar de mantener el valor constante, el método asume que la señal cambia linealmente entre las muestras.
 
 
+\subsection{\textbf{Análisis del sistema continuo vs. sistemas discretos}}
 
-
-\subsection{Análisis de la respuesta de sistemas discretos y continuos ante diferentes entradas}
-
-Se obtuvo la función de transferencia equivalente en el dominio discreto (Z) a partir de la función de transferencia continua G(s) (ecuación \ref{eq:F_transferencia}). 
+Se obtuvieron las funciónes de transferencia equivalentes en el dominio discreto (Z) a partir de la función de transferencia continua G(s) (ecuación \ref{eq:F_transferencia}). 
 
 \begin{equation}
     G(s) = \frac{1}{s^2 + 3s + 2}
@@ -213,7 +212,38 @@ Se obtuvo la función de transferencia equivalente en el dominio discreto (Z) a 
 \end{equation}
 
 
-Una vez obtenida la función de transferencia discreta, se procedió a simular las respuestas para cada sistema, tanto en lazo abierto como en lazo cerrado. Se utilizaron una entrada de escalón unitario y una entrada de impulso unitario.
+\subsubsection{\textbf{Función de transferencia en el dominio discreto}}
+
+Las siguientes son las funciones de transferencia en el dominio Z para los sistemas discretos de flujo y volumen, utilizando los métodos de discretización ZOH y Tustin.
+
+\paragraph{Sistema Discreto del Flujo (ZOH)}
+
+$$H_Z(z) = \frac{1 - 1.166z^{-1} + 0.166z^{-2}}{1 - 0.521z^{-1}}$$
+
+\paragraph{Sistema Discreto del Flujo (Tustin)}
+
+$$H_Z(z) = \frac{0.524 - 0.048z^{-1} - 0.476z^{-2}}{1 + 0.429z^{-1} - 0.476z^{-2}}$$
+
+\paragraph{Sistema Discreto del Volumen (ZOH)}
+
+$$H_Z(z) = \frac{0.051 - 0.051z^{-1} + 0.000z^{-2}}{1 - 1.521z^{-1} + 0.521z^{-2}}$$
+
+\paragraph{Sistema Discreto del Volumen (Tustin)}
+
+$$H_Z(z) = \frac{0.026 + 0.024z^{-1} - 0.026z^{-2} - 0.024z^{-3}}{1 - 0.571z^{-1} - 0.905z^{-2} + 0.476z^{-3}}$$
+
+Se procedió a simular las respuestas para cada sistema, tanto en lazo abierto como en lazo cerrado. Se utilizaron una entrada de escalón unitario y una entrada de impulso unitario.
+
+
+\subsubsection{\textbf{Respuesta del sistema discreto ante diferentes entradas}}
+
+A medida que el tiempo de muestreo ($T_s$) aumenta, el sistema discreto pierde información entre las muestras, lo que provoca una degradación en la respuesta del sistema. Esto se manifiesta en oscilaciones, mayor sobreimpulso y una divergencia notable con respecto a la respuesta del sistema continuo original.  Este retraso de muestreo es una consecuencia directa de la digitalización, ya que al mantener el valor constante entre muestras, el sistema discreto va siempre un paso atrás.
+
+En lazo abierto (LA) y lazo cerrado (LC), un ($T_s$) grande compromete la capacidad del sistema discreto para simular con precisión el comportamiento del sistema continuo.
+
+\subsubsection{\textbf{Respuesta del sistema original continuo ante diferentes entradas}}
+
+Las respuestas del sistema continuo se utilizan como referencia para comparar el desempeño del sistema discreto. El texto indica que, en general, las respuestas del sistema discreto divergen cada vez más de la respuesta del sistema continuo a medida que aumenta el tiempo de muestreo.  Además, el párrafo no menciona cómo se comporta el sistema continuo en lazo abierto versus lazo cerrado, ya que la comparación se centra en cómo el sistema discreto se desvía del continuo.
 
 
 \begin{figure}[h!]
@@ -224,12 +254,7 @@ Una vez obtenida la función de transferencia discreta, se procedió a simular l
 \end{figure}
 
 
-En la figura \ref{fig:simulacion_P5}, Se comparan las respuestas de cada sistema discreto con las del sistema continuo original, lo que permite observar cómo a mayor tiempo de muestreo, la respuesta discreta puede divergir más de la respuesta del sistema continuo.
-El retraso de muestreo es una consecuencia directa del proceso de digitalización. Al muestrear la señal cada ($T_s$) segundos y mantener el valor constante (método ZOH), el sistema discreto siempre va un paso atrás. A medida que el tiempo de muestreo aumenta, el sistema discreto pierde información entre las muestras, lo que provoca una degradación en la respuesta del sistema, manifestada en oscilaciones, mayor sobreimpulso y una divergencia notable de la respuesta respecto al sistema continuo.
 
-
-En ambos casos (lazo abierto y cerrado), un ($T_s$) grande compromete la capacidad del sistema discreto para simular con precisión el comportamiento del sistema original.
-Además, Las respuestas en lazo cerrado (LC) suelen tener menor amplitud que las de lazo abierto (LA) porque la retroalimentación reduce la ganancia del sistema. 
 
 
 \section{Conclusiones}

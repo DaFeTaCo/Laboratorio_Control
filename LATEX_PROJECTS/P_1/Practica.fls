@@ -147,6 +147,8 @@ INPUT E:\SSOFTWARE\MiKTeX\tex\latex\psnfss\ts1ptm.fd
 INPUT E:\SSOFTWARE\MiKTeX\tex\latex\psnfss\ts1ptm.fd
 INPUT E:\SSOFTWARE\MiKTeX\tex\latex\psnfss\ts1ptm.fd
 INPUT E:\SSOFTWARE\MiKTeX\fonts\tfm\adobe\times\ptmr8c.tfm
+INPUT E:\SSOFTWARE\MiKTeX\fonts\vf\adobe\times\ptmbi7t.vf
+INPUT E:\SSOFTWARE\MiKTeX\fonts\tfm\adobe\times\ptmbi8r.tfm
 INPUT E:\SSOFTWARE\MiKTeX\fonts\vf\adobe\times\ptmr7t.vf
 INPUT E:\SSOFTWARE\MiKTeX\fonts\vf\adobe\times\ptmr8c.vf
 INPUT .\Comparacion_P4.png
@@ -191,6 +193,8 @@ INPUT E:\SSOFTWARE\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT E:\SSOFTWARE\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT E:\SSOFTWARE\MiKTeX\fonts\type1\urw\times\utmb8a.pfb
 INPUT E:\SSOFTWARE\MiKTeX\fonts\type1\urw\times\utmb8a.pfb
+INPUT E:\SSOFTWARE\MiKTeX\fonts\type1\urw\times\utmbi8a.pfb
+INPUT E:\SSOFTWARE\MiKTeX\fonts\type1\urw\times\utmbi8a.pfb
 INPUT E:\SSOFTWARE\MiKTeX\fonts\type1\urw\times\utmr8a.pfb
 INPUT E:\SSOFTWARE\MiKTeX\fonts\type1\urw\times\utmr8a.pfb
 INPUT E:\SSOFTWARE\MiKTeX\fonts\type1\urw\times\utmri8a.pfb
