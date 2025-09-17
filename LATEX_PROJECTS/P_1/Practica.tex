@@ -189,6 +189,25 @@ La discretización se realizó mediante dos métodos distintos para su posterior
     \item \textbf{Tustin (transformada bilineal):} Este método utiliza una aproximación trapezoidal para integrar la señal \cite{mathworks_continuous_discrete_nodate}.
 \end{itemize}
 
+Las funciones de transferencia en el dominio Z encontradas fueron:
+
+\paragraph{Sistema Discreto del Flujo (ZOH)}
+
+$$H_Z(z) = \frac{1 - 1.166z^{-1} + 0.166z^{-2}}{1 - 0.521z^{-1}}$$
+
+\paragraph{Sistema Discreto del Flujo (Tustin)}
+
+$$H_Z(z) = \frac{0.524 - 0.048z^{-1} - 0.476z^{-2}}{1 + 0.429z^{-1} - 0.476z^{-2}}$$
+
+\paragraph{Sistema Discreto del Volumen (ZOH)}
+
+$$H_Z(z) = \frac{0.051 - 0.051z^{-1} + 0.000z^{-2}}{1 - 1.521z^{-1} + 0.521z^{-2}}$$
+
+\paragraph{Sistema Discreto del Volumen (Tustin)}
+
+$$H_Z(z) = \frac{0.026 + 0.024z^{-1} - 0.026z^{-2} - 0.024z^{-3}}{1 - 0.571z^{-1} - 0.905z^{-2} + 0.476z^{-3}}$$
+
+
 Las gráficas comparativas de las respuestas de los sistemas se muestran en la figura \ref{fig:simulacion_P4}. 
 
 \begin{figure}[h!]
@@ -214,26 +233,49 @@ Se obtuvieron las funciónes de transferencia equivalentes en el dominio discret
 
 \subsubsection{\textbf{Función de transferencia en el dominio discreto}}
 
-Las siguientes son las funciones de transferencia en el dominio Z para los sistemas discretos de flujo y volumen, utilizando los métodos de discretización ZOH y Tustin.
+Las siguientes son las funciones de transferencia en el dominio discreto Z para los sistemas discreto y continuo bajo diferentes tiempos de muestreo (0.05, 0.1, 0.5, 1).
 
-\paragraph{Sistema Discreto del Flujo (ZOH)}
 
-$$H_Z(z) = \frac{1 - 1.166z^{-1} + 0.166z^{-2}}{1 - 0.521z^{-1}}$$
+\paragraph{Lazo Abierto ($T_s$) = 0.05 s}
 
-\paragraph{Sistema Discreto del Flujo (Tustin)}
+$$G(z) = \frac{0.00058 z^2 + 0.00116 z + 0.00058}{z^2 - 1.856 z + 0.8606}$$
 
-$$H_Z(z) = \frac{0.524 - 0.048z^{-1} - 0.476z^{-2}}{1 + 0.429z^{-1} - 0.476z^{-2}}$$
+\paragraph{Lazo Cerrado ($T_s$) = 0.05 s}
 
-\paragraph{Sistema Discreto del Volumen (ZOH)}
+$$H(z) = \frac{0.00058 z^2 + 0.00116 z + 0.00058}{1.001 z^2 - 1.855 z + 0.8612}$$
 
-$$H_Z(z) = \frac{0.051 - 0.051z^{-1} + 0.000z^{-2}}{1 - 1.521z^{-1} + 0.521z^{-2}}$$
 
-\paragraph{Sistema Discreto del Volumen (Tustin)}
 
-$$H_Z(z) = \frac{0.026 + 0.024z^{-1} - 0.026z^{-2} - 0.024z^{-3}}{1 - 0.571z^{-1} - 0.905z^{-2} + 0.476z^{-3}}$$
+\paragraph{Lazo Abierto ($T_s$) = 0.1 s}
 
-Se procedió a simular las respuestas para cada sistema, tanto en lazo abierto como en lazo cerrado. Se utilizaron una entrada de escalón unitario y una entrada de impulso unitario.
+$$G(z) = \frac{0.002165 z^2 + 0.004329 z + 0.002165}{z^2 - 1.723 z + 0.7403}$$
 
+\paragraph{Lazo Cerrado ($T_s$) = 0.1 s}
+
+$$H(z) = \frac{0.002165 z^2 + 0.004329 z + 0.002165}{1.002 z^2 - 1.719 z + 0.7424}$$
+
+
+\paragraph{Lazo Abierto ($T_s$) = 0.5 s}
+
+$$G(z) = \frac{0.03333 z^2 + 0.06667 z + 0.03333}{z^2 - 0.9333 z + 0.2}$$
+
+\paragraph{Lazo Cerrado ($T_s$) = 0.5 s}
+
+$$H(z) = \frac{0.03333 z^2 + 0.06667 z + 0.03333}{1.033 z^2 - 0.8667 z + 0.2333}$$
+
+
+
+\paragraph{Lazo Abierto ($T_s$) = 1 s}
+
+$$G(z) = \frac{0.08333 z^2 + 0.1667 z + 0.08333}{z^2 - 0.3333 z + 7.401 \times 10^{-17}}$$
+
+\paragraph{Lazo Cerrado ($T_s$) = 1 s}
+
+$$H(z) = \frac{0.08333 z^2 + 0.1667 z + 0.08333}{1.083 z^2 - 0.1667 z + 0.08333}$$
+
+
+Posteriormente se procedió a simular las respuestas para cada sistema, tanto en lazo abierto como en lazo cerrado. Se utilizaron una entrada de escalón unitario y una entrada de impulso unitario.
+El resultado se muestra en la figura \ref{fig:simulacion_P5}.
 
 \subsubsection{\textbf{Respuesta del sistema discreto ante diferentes entradas}}
 
@@ -243,7 +285,7 @@ En lazo abierto (LA) y lazo cerrado (LC), un ($T_s$) grande compromete la capaci
 
 \subsubsection{\textbf{Respuesta del sistema original continuo ante diferentes entradas}}
 
-Las respuestas del sistema continuo se utilizan como referencia para comparar el desempeño del sistema discreto. El texto indica que, en general, las respuestas del sistema discreto divergen cada vez más de la respuesta del sistema continuo a medida que aumenta el tiempo de muestreo.  Además, el párrafo no menciona cómo se comporta el sistema continuo en lazo abierto versus lazo cerrado, ya que la comparación se centra en cómo el sistema discreto se desvía del continuo.
+Las respuestas del sistema continuo se utilizan como referencia para comparar el desempeño del sistema discreto. 
 
 
 \begin{figure}[h!]

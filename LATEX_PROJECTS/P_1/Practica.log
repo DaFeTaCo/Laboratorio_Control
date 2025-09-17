@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.9)  16 SEP 2025 17:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.9)  16 SEP 2025 21:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -302,28 +302,27 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 
 [2 <./Comportamiento-Practica1.png> <./Comparacion_Prac1.png>]
+
 <Comparacion_P4.png, id=26, 714.7503pt x 427.8384pt>
 File: Comparacion_P4.png Graphic file (type png)
 <use Comparacion_P4.png>
-Package pdftex.def Info: Comparacion_P4.png  used on input line 196.
+Package pdftex.def Info: Comparacion_P4.png  used on input line 215.
 (pdftex.def)             Requested size: 252.0pt x 150.84242pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-
 
 
 [3 <./Comparacion_P4.png>]
 <Comparacion_P5.png, id=32, 1002.3849pt x 714.7503pt>
 File: Comparacion_P5.png Graphic file (type png)
 <use Comparacion_P5.png>
-Package pdftex.def Info: Comparacion_P5.png  used on input line 251.
+Package pdftex.def Info: Comparacion_P5.png  used on input line 293.
 (pdftex.def)             Requested size: 252.0pt x 179.6796pt.
- (Practica.bbl
 
-)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+(Practica.bbl)
 
 [4 <./Comparacion_P5.png>] (Practica.aux)
  ***********
@@ -334,13 +333,13 @@ L3 programming layer <2025-08-13>
 Here is how much of TeX's memory you used:
  4342 strings out of 468133
  75587 string characters out of 5442738
- 493830 words of memory out of 5000000
+ 492830 words of memory out of 5000000
  32946 multiletter control sequences out of 15000+600000
  665762 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,7n,65p,882b,363s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <E:/SSOFTWARE/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Practica.pdf (4 pages, 542960 bytes).
+Output written on Practica.pdf (4 pages, 544722 bytes).
 PDF statistics:
  95 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
