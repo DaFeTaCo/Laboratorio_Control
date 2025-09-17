@@ -233,7 +233,7 @@ Se obtuvieron las funciónes de transferencia equivalentes en el dominio discret
 
 \subsubsection{\textbf{Función de transferencia en el dominio discreto}}
 
-Las siguientes son las funciones de transferencia en el dominio discreto Z para los sistemas discreto y continuo bajo diferentes tiempos de muestreo (0.05, 0.1, 0.5, 1).
+Las siguientes son las funciones de transferencia en el dominio discreto Z para los sistemas discreto y continuo bajo diferentes tiempos de muestreo (0.05, 0.1, 0.5 y 1 segundo).
 
 
 \paragraph{Lazo Abierto ($T_s$) = 0.05 s}
@@ -257,21 +257,21 @@ $$H(z) = \frac{0.002165 z^2 + 0.004329 z + 0.002165}{1.002 z^2 - 1.719 z + 0.742
 
 \paragraph{Lazo Abierto ($T_s$) = 0.5 s}
 
-$$G(z) = \frac{0.03333 z^2 + 0.06667 z + 0.03333}{z^2 - 0.9333 z + 0.2}$$
+$$G(z) = \frac{0.033 z^2 + 0.06667 z + 0.033}{z^2 - 0.9333 z + 0.2}$$
 
 \paragraph{Lazo Cerrado ($T_s$) = 0.5 s}
 
-$$H(z) = \frac{0.03333 z^2 + 0.06667 z + 0.03333}{1.033 z^2 - 0.8667 z + 0.2333}$$
+$$H(z) = \frac{0.033 z^2 + 0.06667 z + 0.033}{1.033 z^2 - 0.8667 z + 0.233}$$
 
 
 
 \paragraph{Lazo Abierto ($T_s$) = 1 s}
 
-$$G(z) = \frac{0.08333 z^2 + 0.1667 z + 0.08333}{z^2 - 0.3333 z + 7.401 \times 10^{-17}}$$
+$$G(z) = \frac{0.083 z^2 + 0.1667 z + 0.083}{z^2 - 0.3333 z + 7.401 \times 10^{-17}}$$
 
 \paragraph{Lazo Cerrado ($T_s$) = 1 s}
 
-$$H(z) = \frac{0.08333 z^2 + 0.1667 z + 0.08333}{1.083 z^2 - 0.1667 z + 0.08333}$$
+$$H(z) = \frac{0.083 z^2 + 0.1667 z + 0.083}{1.083 z^2 - 0.1667 z + 0.083}$$
 
 
 Posteriormente se procedió a simular las respuestas para cada sistema, tanto en lazo abierto como en lazo cerrado. Se utilizaron una entrada de escalón unitario y una entrada de impulso unitario.
@@ -281,12 +281,14 @@ El resultado se muestra en la figura \ref{fig:simulacion_P5}.
 
 A medida que el tiempo de muestreo ($T_s$) aumenta, el sistema discreto pierde información entre las muestras, lo que provoca una degradación en la respuesta del sistema. Esto se manifiesta en oscilaciones, mayor sobreimpulso y una divergencia notable con respecto a la respuesta del sistema continuo original.  Este retraso de muestreo es una consecuencia directa de la digitalización, ya que al mantener el valor constante entre muestras, el sistema discreto va siempre un paso atrás.
 
-En lazo abierto (LA) y lazo cerrado (LC), un ($T_s$) grande compromete la capacidad del sistema discreto para simular con precisión el comportamiento del sistema continuo.
+En lazo abierto (LA) y lazo cerrado (LC), un ($T_s$) grande compromete la capacidad del sistema discreto para simular con precisión el comportamiento del sistema continuo. En el caso de la respuesta al impulso unitario, la discretización si bien mantiene la forma de la respuesta, no concerva en amplitud los valores de la respuesta continua. Esto puede ser debido a la definición matemática del impulso, que no puede ser correctamente discretizada, por lo cual comunmente se realiza testeo de sistemas con la función escalón.
 
 \subsubsection{\textbf{Respuesta del sistema original continuo ante diferentes entradas}}
 
 Las respuestas del sistema continuo se utilizan como referencia para comparar el desempeño del sistema discreto. 
-
+Con la entrada de escalón unitario, la respuesta del sistema es una subida gradual (transitoria) que busca un punto de equilibrio constante de aproximadamente 0.5 en lazo abierto y 0.33 en lazo cerrado. Esto muestra que el sistema es estable, ya que la salida no se dispara hacia el infinito. 
+Por otro lado, la entrada de impulso unitario genera una respuesta mucho más abrupta y de corta duración.  Este decaimiento a cero también confirma la estabilidad del sistema, ya que la perturbación desaparece con el tiempo. 
+En este sentido, el escalón evalúa la capacidad del sistema para alcanzar y mantener un estado final, mientras que el impulso evalúa la reacción del sistema a un evento repentino y su capacidad para volver al reposo.
 
 \begin{figure}[h!]
     \centering

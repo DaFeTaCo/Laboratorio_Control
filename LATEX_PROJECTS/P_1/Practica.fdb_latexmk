@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex Practica"] 1758076576.86216 "Practica.aux" "Practica.bbl" "Practica" 1758076789.96589 0
+["bibtex Practica"] 1758078383.80216 "Practica.aux" "Practica.bbl" "Practica" 1758078987.37711 0
   "./bibliografia-Pract1.bib" 1758055628 2196 c56c91d77aa7c98390352633c74d3e93 ""
   "E:/SSOFTWARE/MiKTeX/bibtex/bst/bibtex/ieeetr.bst" 1291864344 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
-  "Practica.aux" 1758076789 6028 ad7122d16e7599aae8e6b63db988ab14 "pdflatex"
+  "Practica.aux" 1758078986 6028 50fe892a318d87015c56547b8b324d64 "pdflatex"
   (generated)
   "Practica.bbl"
   "Practica.blg"
   (rewritten before read)
-["pdflatex"] 1758076787.86896 "e:/ACTUAL/ACTUAL/CONTROL/Laboratorio_Control/LATEX_PROJECTS/P_1/Practica.tex" "Practica.pdf" "Practica" 1758076789.96675 0
+["pdflatex"] 1758078985.01292 "e:/ACTUAL/ACTUAL/CONTROL/Laboratorio_Control/LATEX_PROJECTS/P_1/Practica.tex" "Practica.pdf" "Practica" 1758078987.37921 0
   "C:/Users/tamay/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1757966943 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/tamay/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1757472028 13245317 0857c909c8835202c329e722db6e9131 ""
   "Comparacion_P4.png" 1757970906 93873 78f494217beb665f6f206effbd9db6f8 ""
@@ -78,10 +78,10 @@
   "E:/SSOFTWARE/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1751005717 30351 a2b09edc6c93a742566b222c33d0278e ""
   "E:/SSOFTWARE/MiKTeX/tex/latex/psnfss/ot1ptm.fd" 1585253778 1007 15056f4a61917ceed3a44e4ac11fcc52 ""
   "E:/SSOFTWARE/MiKTeX/tex/latex/psnfss/ts1ptm.fd" 1585253778 653 96f56dc5d1ef1fe1121f1cfeec70ee0c ""
-  "Practica.aux" 1758076789 6028 ad7122d16e7599aae8e6b63db988ab14 "pdflatex"
-  "Practica.bbl" 1758076577 1248 6a183a43180c813c4a677eb54117602b "bibtex Practica"
-  "Practica.tex" 1758076787 20190 1df3212310a5b2fa40e66f92dbc159f3 ""
-  "e:/ACTUAL/ACTUAL/CONTROL/Laboratorio_Control/LATEX_PROJECTS/P_1/Practica.tex" 1758076787 20190 1df3212310a5b2fa40e66f92dbc159f3 ""
+  "Practica.aux" 1758078986 6028 50fe892a318d87015c56547b8b324d64 "pdflatex"
+  "Practica.bbl" 1758078384 1248 6a183a43180c813c4a677eb54117602b "bibtex Practica"
+  "Practica.tex" 1758078984 21287 92391c4825a1cae077e79818a714b264 ""
+  "e:/ACTUAL/ACTUAL/CONTROL/Laboratorio_Control/LATEX_PROJECTS/P_1/Practica.tex" 1758078984 21287 92391c4825a1cae077e79818a714b264 ""
   (generated)
   "Practica.aux"
   "Practica.log"

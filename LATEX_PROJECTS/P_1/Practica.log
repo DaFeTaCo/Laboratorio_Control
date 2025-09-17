@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.9)  16 SEP 2025 21:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.9)  16 SEP 2025 22:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -311,20 +311,21 @@ Package pdftex.def Info: Comparacion_P4.png  used on input line 215.
 
 
 [3 <./Comparacion_P4.png>]
+
 <Comparacion_P5.png, id=32, 1002.3849pt x 714.7503pt>
 File: Comparacion_P5.png Graphic file (type png)
 <use Comparacion_P5.png>
-Package pdftex.def Info: Comparacion_P5.png  used on input line 293.
+Package pdftex.def Info: Comparacion_P5.png  used on input line 295.
 (pdftex.def)             Requested size: 252.0pt x 179.6796pt.
+(Practica.bbl
+
+[4 <./Comparacion_P5.png>])
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[5
 
-
-(Practica.bbl)
-
-[4 <./Comparacion_P5.png>] (Practica.aux)
+] (Practica.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
@@ -339,9 +340,9 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  57i,7n,65p,882b,363s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <E:/SSOFTWARE/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><E:/SSOFTWARE/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Practica.pdf (4 pages, 544722 bytes).
+Output written on Practica.pdf (5 pages, 546233 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
+ 98 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
